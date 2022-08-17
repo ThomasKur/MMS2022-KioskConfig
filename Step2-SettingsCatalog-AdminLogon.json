@@ -1,74 +1,57 @@
 ﻿{
-    "createdDateTime":  "2022-04-18T19:19:12.5271942Z",
-    "creationSource":  null,
-    "description":  "",
-    "lastModifiedDateTime":  "2022-04-18T19:19:12.5271942Z",
-    "name":  "MMS-Step2-AdminLogon",
-    "platforms":  "windows10",
-    "roleScopeTagIds":  [
-                            "0"
-                        ],
-    "settingCount":  2,
-    "technologies":  "mdm",
-    "id":  "d262601d-3833-46f0-955d-450e7f89672f",
-    "templateReference":  {
-                              "templateId":  "",
-                              "templateFamily":  "none",
-                              "templateDisplayName":  null,
-                              "templateDisplayVersion":  null
-                          },
-    "settings":  [
-                     {
-                         "@odata.context":  "https://graph.microsoft.com/beta/$metadata#deviceManagement/configurationPolicies(\u0027d262601d-3833-46f0-955d-450e7f89672f\u0027)/settings",
-                         "value":  [
-                                       {
-                                           "id":  "0",
-                                           "settingInstance":  {
-                                                                   "@odata.type":  "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
-                                                                   "settingDefinitionId":  "device_vendor_msft_policy_config_userrights_allowlocallogon",
-                                                                   "settingInstanceTemplateReference":  null,
-                                                                   "simpleSettingCollectionValue":  [
-                                                                                                        {
-                                                                                                            "@odata.type":  "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-                                                                                                            "settingValueTemplateReference":  null,
-                                                                                                            "value":  "kioskUser0"
-                                                                                                        },
-                                                                                                        {
-                                                                                                            "@odata.type":  "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-                                                                                                            "settingValueTemplateReference":  null,
-                                                                                                            "value":  "*S-1-5-32-544"
-                                                                                                        }
-                                                                                                    ]
-                                                               }
-                                       },
-                                       {
-                                           "id":  "1",
-                                           "settingInstance":  {
-                                                                   "@odata.type":  "#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance",
-                                                                   "settingDefinitionId":  "device_vendor_msft_passportforwork_{tenantid}",
-                                                                   "settingInstanceTemplateReference":  null,
-                                                                   "groupSettingCollectionValue":  [
-                                                                                                       {
-                                                                                                           "settingValueTemplateReference":  null,
-                                                                                                           "children":  [
-                                                                                                                            {
-                                                                                                                                "@odata.type":  "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
-                                                                                                                                "settingDefinitionId":  "device_vendor_msft_passportforwork_{tenantid}_policies_usepassportforwork",
-                                                                                                                                "settingInstanceTemplateReference":  null,
-                                                                                                                                "choiceSettingValue":  {
-                                                                                                                                                           "settingValueTemplateReference":  null,
-                                                                                                                                                           "value":  "device_vendor_msft_passportforwork_{tenantid}_policies_usepassportforwork_false",
-                                                                                                                                                           "children":  [
-
-                                                                                                                                                                        ]
-                                                                                                                                                       }
-                                                                                                                            }
-                                                                                                                        ]
-                                                                                                       }
-                                                                                                   ]
-                                                               }
-                                       }
-                                   ]
-                     }
-                 ]
+    "creationSource": null,
+    "name": "MMS-Step2-AdminLogon",
+    "description": "",
+    "platforms": "windows10",
+    "technologies": "mdm",
+    "roleScopeTagIds": [
+        "0"
+    ],
+    "settings": [
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSetting",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+                "settingDefinitionId": "device_vendor_msft_policy_config_userrights_allowlocallogon",
+                "simpleSettingCollectionValue": [
+                    {
+                        "value": "kioskUser0",
+                        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+                    },
+                    {
+                        "value": "*S-1-5-32-544",
+                        "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+                    }
+                ]
+            }
+        },
+        {
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationSetting",
+            "settingInstance": {
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance",
+                "settingDefinitionId": "device_vendor_msft_passportforwork_{tenantid}",
+                "groupSettingCollectionValue": [
+                    {
+                        "children": [
+                            {
+                                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                                "settingDefinitionId": "device_vendor_msft_passportforwork_{tenantid}_policies_usepassportforwork",
+                                "choiceSettingValue": {
+                                    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
+                                    "value": "device_vendor_msft_passportforwork_{tenantid}_policies_usepassportforwork_false",
+                                    "children": []
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "templateReference": {
+        "templateId": "",
+        "templateFamily": "none",
+        "templateDisplayName": null,
+        "templateDisplayVersion": null
+    }
 }
